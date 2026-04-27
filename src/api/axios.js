@@ -16,8 +16,6 @@ const api = axios.create({
   },
 });
 
-export default api;
-
 // Interceptor de requisição: adiciona o header de autenticação automaticamente
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem('authToken');
